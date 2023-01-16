@@ -15,7 +15,7 @@ for ($i = 0; $i -lt $howManyVMs; $i++) {
       ImageName = $ImageVM
       PublicIpAddressName = 'PublicIp'
       Credential = $cred
-      OpenPorts = 3389
+      OpenPorts = 3389,80
     }
     
     if ((Get-AzResourceGroup -Name $rgname -ErrorVariable notPresent -ErrorAction SilentlyContinue).length -eq 1) {
