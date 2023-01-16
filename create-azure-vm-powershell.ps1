@@ -13,7 +13,7 @@ for ($i = 0; $i -lt $howManyVMs; $i++) {
       Name = $VMName
       Location = $RGLocation
       ImageName = $ImageVM
-      PublicIpAddressName = 'tutorialPublicIp'
+      PublicIpAddressName = 'PublicIp'
       Credential = $cred
       OpenPorts = 3389
     }
