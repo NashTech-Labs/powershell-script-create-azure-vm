@@ -1,13 +1,10 @@
-#--- Needs Azure CLI
 Connect-AzAccount
 
-#--- Start from here on Azure PowerShell
-$howManyVMs = Read-Host "How many VM's do you want to create? "
 $cred = Get-Credential -Message "Enter a username and password for the virtual machine."
 
 for ($i = 0; $i -lt $howManyVMs; $i++) {
-    $VMName = Read-Host "$i - Enter VM Name"
-    $rgname = Read-Host "$i - Enter Resource Group name"
+    $VMName = Read-Host "$i - Enter a VM Name"
+    $rgname = Read-Host "$i - Enter a Resource Group name"
     $rgIsNotCreated = true
     $rglocation = "Eastus"
     $VMImage = "Win2016Datacenter"
